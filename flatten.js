@@ -9,11 +9,9 @@ export default function flatten(value, depth = 0) {
       //So destructure the returned array using spread operator
       //and push its elements into the result array.
       result.push(...flatten(e, depth + 1));
-      return;
     } else {
       //- If the element is not an array, push it into result
       result.push(e);
-      return;
     }
   });
   console.log(`Exit depth: ${depth}`);
