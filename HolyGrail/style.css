@@ -1,0 +1,40 @@
+body {
+  text-align: center;
+  margin: 0;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: tomato;
+  height: 60px;
+}
+
+#columns {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  flex-shrink: 0;
+  width: 100px;
+  background-color: cadetblue;
+}
+main {
+  background-color: pink;
+  flex-grow: 1;
+}
+aside {
+  flex-shrink: 0;
+  width: 100px;
+  background-color: blueviolet;
+}
+
+footer {
+  background-color: slategrey;
+  height: 100px;
+}
