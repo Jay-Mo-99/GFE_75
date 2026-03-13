@@ -1,0 +1,46 @@
+body {
+  font-family: sans-serif;
+  background-color: #f6f6ef;
+  align-items: center;
+  justify-items: center;
+}
+
+.items {
+  display: grid;
+  row-gap: 10px;
+}
+
+.title {
+  color: orangered;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #dcdcdc;
+  border-color: #dddddd;
+  padding: 16px;
+  margin: 8px;
+  display: grid;
+  row-gap: 5px;
+}
+
+.card-title {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 0;
+}
+
+.sub-text {
+  font-size: 14px;
+  color: #444;
+}
+
+.load-more-btn {
+  background-color: orangered;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  margin-top: 20px;
+  padding: 8px 17px;
+}
