@@ -25,16 +25,16 @@ export default function deepClone(param) {
     Object.entries(param).map(([key, value]) => [key, deepClone(value)]),
   );
 }
-const obj2 = { foo: [{ bar: "baz" }] };
+const obj2 = { a: { b: { c: "hello" } } };
 const clonedObj2 = deepClone(obj2);
-//param: { foo: [{ bar: "baz" }] }
-//Object.entries: [ ["foo", [{ bar: "baz" }]] ]
-//key: "foo", value: [{ bar: "baz" }]
-//param:[{ bar: "baz" }], item: { bar: "baz" }
-//param: { bar: "baz" }
-//key:"bar", value:"baz"  ----> Base Case
-//Return "baz"
-//{bar:"baz"}
-//[{bar:"baz"}]
-//[["foo", [{ bar: "baz" }]]]
-//Object.fromEntries: { foo: [{ bar: "baz" }] }
+//param: { a: { b: { c: 'hello' } } }
+//Object.entries -> [[a, { b: { c: 'hello' } }]]
+//key:a, value: { b: { c: 'hello' } }
+//param: { b: { c: 'hello' } }
+//key:b, value: { c: 'hello' }
+//param: { c: 'hello' }
+//key:c , value: 'hello'  ------> Base Case
+//Return 'hello'
+//Return {c:"hello"}
+//Return {b: { c: 'hello' }}
+//Return {a: { b: { c: 'hello' } }}

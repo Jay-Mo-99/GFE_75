@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM API Practice</title>
+  </head>
+  <body>
+    <div id="container">
+      <span style="font-size: 12px">Span 1</span>
+      <p style="font-size: 12px">Paragraph 1</p>
+      <blockquote style="font-size: 14px">Blockquote</blockquote>
+      <div style="font-size: 12px">
+        <span style="font-size: 14px"
+          >Span 2 (nested)
+          <a href="google.com">a 3 (nested) </a>
+        </span>
+        <p style="font-size: 12px">Paragraph 2 (nested)</p>
+      </div>
+    </div>
+
+    <script>
+      const container = document.getElementById("container");
+
+      // =============================
+      // 실습 1: element.children
+      // =============================
+      //- Return : An HTMLCollection of the child elements of the specified elements.
+      //- Can approach each elements by index
+      //- It's not an array, but an array-like object.
+
+      // =============================
+      // 실습 2: getComputedStyle
+      // =============================
+
+      //console.log(container.style); //only returns inline styles
+      const style = window.getComputedStyle(container);
+      //console.log(style);
+      //Return : An CSSStyleDeclaration object
+      // that contains the final computed values of all CSS properties applied to the element.
+      //Don't include styles from child elements.
+      //console.log(style.getPropertyValue("font-size"));
+      //getPropertyValue() method of the CSSStyleDeclaration
+      //returns the value of the specified CSS property for that element.
+
+      const result = [1, 2];
+      let add = [3, 4];
+      result.push(...add);
+      console.log(result);
+    </script>
+  </body>
+</html>
